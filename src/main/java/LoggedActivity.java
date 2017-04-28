@@ -86,8 +86,7 @@ public class LoggedActivity extends AppCompatActivity {
 
         @Override
         protected List<Module> doInBackground(String... params) {
-            //String jsonResponse;
-            //JSONObject jObjectResult;
+            
             try {
 
                 customList = new ArrayList<>();
@@ -95,27 +94,12 @@ public class LoggedActivity extends AppCompatActivity {
                 param.put("action", "loadModules");
                 param.put("username", params[0]);
 
-                //Teste 1:
-                //jObjectResult = m_serviceAccess.convertJSONString2Obj(m_serviceAccess.getJSONStringWithParam_POST(Common.SERVICE_API_URL, param));
-                //JSONArray arr = new JSONArray(jObjectResult);
-
-                //Teste 2:
+                //Recebe a resposta do web service (JsonArray) para montar a listview de módulos:
                 JSONArray arr = m_serviceAccess.getJSONArrayWithParam_POST(Common.SERVICE_API_URL, param);
 
                 Gson gson = new Gson();
                 Type type = new TypeToken<List<Module>>(){}.getType();
                 customList = gson.fromJson(arr.toString(), type);
-
-                //Teste 3:
-                //jsonResponse = m_serviceAccess.getJSONStringWithParam_POST(Common.SERVICE_API_URL, param);
-                //Log.d("Json Response: ",jsonResponse);
-                //JSONArray arr = new JSONArray(jsonResponse);
-
-                //for (int i = 0; i < arr.length(); i++)
-                //{
-                //    customList.add(convertModule(arr.getJSONObject(i)));
-                    //customList.add(convertModule(arr.getJSONObject(i)));
-                //}
 
             }
             catch (Throwable t)
