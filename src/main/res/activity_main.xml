@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/windowBackgroundFallback"
+    tools:context="com.example.fred.securitycenter.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="405dp"
+        android:layout_height="599dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="2dp">
+
+        <ImageView
+            android:id="@+id/imageView2_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            app:srcCompat="@drawable/cloud_logo"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:id="@+id/editText_userName"
+            android:layout_width="279dp"
+            android:layout_height="44dp"
+            android:ems="10"
+            android:fontFamily="serif"
+            android:hint="Usuário"
+            android:inputType="none"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textColorHint="@android:color/holo_orange_dark"
+            android:textColorLink="@android:color/holo_red_light"
+            tools:layout_editor_absoluteX="53dp"
+            tools:layout_editor_absoluteY="233dp"
+            android:layout_above="@+id/editText_userPassword"
+            android:layout_alignStart="@+id/editText_userPassword"
+            android:layout_marginBottom="32dp" />
+
+        <EditText
+            android:id="@+id/editText_userPassword"
+            android:layout_width="279dp"
+            android:layout_height="44dp"
+            android:ems="10"
+            android:fontFamily="serif"
+            android:hint="Senha"
+            android:inputType="textPassword"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textColorHint="@android:color/holo_orange_dark"
+            android:textColorLink="@android:color/holo_red_light"
+            tools:layout_editor_absoluteX="53dp"
+            tools:layout_editor_absoluteY="305dp"
+            android:layout_above="@+id/btn_loginSubmitt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="62dp" />
+
+        <Button
+            android:id="@+id/btn_loginSubmitt"
+            android:layout_width="279dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="60dp"
+            android:text="Login"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textColorLink="@android:color/holo_red_light"
+            tools:layout_editor_absoluteX="53dp"
+            tools:layout_editor_absoluteY="403dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/editText_userPassword" />
+
+        <TextView
+            android:id="@+id/textView_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Smart Security App"
+            android:textColor="@android:color/background_dark"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/imageView2_logo"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
