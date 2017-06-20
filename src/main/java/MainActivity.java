@@ -39,23 +39,6 @@ public class MainActivity extends AppCompatActivity
         {
             public void onClick (View v)
             {
-                /*
-                if (editText_userName.getText().toString().equals("") ||
-                        editText_userPassword.getText().toString().equals(""))
-                {
-                    //editText_userName.setError("Dados inválidos.");
-                    Toast.makeText(getApplicationContext(), "Dados inválidos!", Toast.LENGTH_LONG).show();
-                    return;
-                }
-                else if (editText_userName.getText().toString().equals("Admin") &&
-                    editText_userPassword.getText().toString().equals("password"))
-                {
-                    Toast.makeText(getApplicationContext(), "Login realizado!", Toast.LENGTH_LONG).show();
-                    Intent myintent = new Intent(MainActivity.this, LoggedActivity.class);
-                    myintent.putExtra("username", editText_userName.getText().toString());
-                    startActivity(myintent);
-                }
-                */
                 //Validate input
                 if ("".equals(editText_userName.getText().toString()))
                 {
